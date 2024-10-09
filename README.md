@@ -93,3 +93,21 @@ Following are some of the classic examples of cloud controller manager.
 Deploying Kubernetes Service of type Load balancer. Here Kubernetes provisions a Cloud-specific Loadbalancer and integrates with Kubernetes Service.
 Provisioning storage volumes (PV) for pods backed by cloud storage solutions.
 Overall Cloud Controller Manager manages the lifecycle of cloud-specific resources used by kubernetes.
+
+## Worker Node
+
+Worker nodes are critical components in a Kubernetes architecture because they help in running containerized applications.
+
+## Worker Node Components
+
+Worker nodes are the primary execution units in a Kubernetes cluster where the actual workloads run. Each worker node can host multiple pods, each containing one or more containers running inside them. Every worker node consists of three components responsible for scheduling and managing these pods:
+
+### Kubelet
+
+The kubelet is an essential component that runs on every node in the Kubernetes cluster. It acts as an agent responsible for registering worker nodes with the API server and working with the podSpec primarily from the API server.
+
+![Kubelet](./docs/images/kubelet.png)
+
+The kubelet creates, modifies, and deletes containers for the pod. Additionally, it handles liveliness, readiness, and startup probes. It also mounts volumes by reading pod configuration and creating respective directories reporting Node pod status via calls to the API server.
+
+The Kubelet starts the api-server, scheduler, and controller manager as static pods while bootstrapping the control plane. The kubelet is crucial in managing the containers and ensuring the pod is in the desired state.
