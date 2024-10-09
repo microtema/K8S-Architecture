@@ -68,9 +68,7 @@ when you create a manifest YAML file to specify the deployment ( two replicas, o
 
 There are several types of controllers managed by the kube-controller-manager:
 
-* Deployment controllers 
-
-handle the deployment of multiple replicas of an application running inside containers.
+* **Deployment controllers** handle the deployment of multiple replicas of an application running inside containers.
 
 * **Replication controllers** ensure a specific number of pod replicas are always running. If a pod fails, the replication controller creates a new one to take its place.
 
