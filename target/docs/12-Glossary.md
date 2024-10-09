@@ -1,0 +1,3 @@
+# Glossary
+
+See shared documentation
