@@ -451,25 +451,25 @@
         <mxCell id="1" parent="0" />
         <object placeholders="1" c4Name="Scheduler" c4Type="SystemScopeBoundary" c4Application="Kubernetes Architecture" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;&lt;div style=&quot;text-align: left&quot;&gt;%c4Name%&lt;/div&gt;&lt;/b&gt;&lt;/font&gt;&lt;div style=&quot;text-align: left&quot;&gt;[%c4Application%]&lt;/div&gt;" id="tvD_ctqPMHAEgiQjJpqI-1">
           <mxCell style="rounded=1;fontSize=11;whiteSpace=wrap;html=1;dashed=1;arcSize=20;fillColor=#dae8fc;strokeColor=#6c8ebf;labelBackgroundColor=none;align=left;verticalAlign=bottom;labelBorderColor=none;spacingTop=0;spacing=10;dashPattern=8 4;metaEdit=1;rotatable=0;perimeter=rectanglePerimeter;noLabel=0;labelPadding=0;allowArrows=0;connectable=0;expand=0;recursiveResize=0;editable=1;pointerEvents=0;absoluteArcSize=1;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1" parent="1">
-            <mxGeometry x="40" y="230" width="610" height="450" as="geometry" />
+            <mxGeometry x="40" y="230" width="760" height="450" as="geometry" />
           </mxCell>
         </object>
         <mxCell id="T86Ei967LZe-cqzJiRGT-2" value="" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};participant=umlActor;" vertex="1" parent="1">
           <mxGeometry x="109" y="290" width="20" height="300" as="geometry" />
         </mxCell>
         <mxCell id="T86Ei967LZe-cqzJiRGT-4" value="Nodes" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fillColor=#b0e3e6;strokeColor=#0e8088;" vertex="1" parent="1">
-          <mxGeometry x="200" y="290" width="100" height="300" as="geometry" />
+          <mxGeometry x="250" y="290" width="100" height="300" as="geometry" />
         </mxCell>
         <mxCell id="T86Ei967LZe-cqzJiRGT-5" value="Scoring Plugins" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fillColor=#fad9d5;strokeColor=#ae4132;" vertex="1" parent="1">
-          <mxGeometry x="360" y="290" width="100" height="300" as="geometry" />
+          <mxGeometry x="450" y="290" width="100" height="300" as="geometry" />
         </mxCell>
         <mxCell id="T86Ei967LZe-cqzJiRGT-6" value="Pod" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fillColor=#cce5ff;strokeColor=#36393d;" vertex="1" parent="1">
-          <mxGeometry x="520" y="290" width="100" height="300" as="geometry" />
+          <mxGeometry x="640" y="290" width="100" height="300" as="geometry" />
         </mxCell>
         <mxCell id="T86Ei967LZe-cqzJiRGT-7" value="filter available nodes" style="endArrow=block;endFill=1;html=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=top;rounded=0;" edge="1" parent="1">
           <mxGeometry x="-0.8462" y="30" relative="1" as="geometry">
             <mxPoint x="120" y="390" as="sourcePoint" />
-            <mxPoint x="250" y="390" as="targetPoint" />
+            <mxPoint x="300" y="390" as="targetPoint" />
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
@@ -480,7 +480,7 @@
             <mxPoint x="-14" y="6" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="T86Ei967LZe-cqzJiRGT-10" value="return node scores" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" edge="1" parent="1">
+        <mxCell id="T86Ei967LZe-cqzJiRGT-10" value="return node scores" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" edge="1" parent="1" source="T86Ei967LZe-cqzJiRGT-5">
           <mxGeometry x="-0.4529" relative="1" as="geometry">
             <mxPoint x="409.5" y="490" as="sourcePoint" />
             <mxPoint x="118.85483870967744" y="490" as="targetPoint" />
@@ -490,14 +490,14 @@
         <mxCell id="T86Ei967LZe-cqzJiRGT-11" value="select best node" style="endArrow=block;endFill=1;html=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=top;rounded=0;" edge="1" parent="1">
           <mxGeometry x="-0.5385" y="30" relative="1" as="geometry">
             <mxPoint x="120" y="540" as="sourcePoint" />
-            <mxPoint x="250" y="540" as="targetPoint" />
+            <mxPoint x="300" y="540" as="targetPoint" />
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="T86Ei967LZe-cqzJiRGT-12" value="bind pod to selected node" style="endArrow=block;endFill=1;html=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=top;rounded=0;" edge="1" parent="1">
           <mxGeometry x="-0.3831" y="30" relative="1" as="geometry">
             <mxPoint x="122" y="579" as="sourcePoint" />
-            <mxPoint x="569" y="579" as="targetPoint" />
+            <mxPoint x="690" y="579" as="targetPoint" />
             <Array as="points">
               <mxPoint x="346" y="580" />
             </Array>
