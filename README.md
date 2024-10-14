@@ -112,7 +112,7 @@ The kubelet creates, modifies, and deletes containers for the pod. Additionally,
 
 The Kubelet starts the api-server, scheduler, and controller manager as static pods while bootstrapping the control plane. The kubelet is crucial in managing the containers and ensuring the pod is in the desired state.
 
-## Kube Proxy
+### Kube Proxy
 
 Kube-proxy is a daemon that runs on every node as a daemonset. It is a proxy component that implements the Kubernetes Services concept for pods. (single DNS for a set of pods with load balancing). It primarily proxies UDP, TCP, and SCTP and does not understand HTTP.
 
@@ -122,7 +122,7 @@ Kube-proxy communicates with the API server to get the details about the Service
 
 The modes include IPTables, IPVS, Userspace, and Kernelspace. When using IPTables mode, Kube-proxy handles traffic with IPtable rules and randomly selects a backend pod for load balancing.
 
-## Container Runtime
+### Container Runtime
 
 Just like Java Runtime (JRE) is required to run Java programs, container runtime is essential to running containers. Container runtime is responsible for various tasks, such as pulling images from container registries, allocating and isolating resources for containers, and managing the entire lifecycle of a container on a host.
 
@@ -133,3 +133,23 @@ Kubernetes interacts with container runtimes through Container Runtime Interface
 The Open Container Initiative (OCI) is a set of standards for container formats and runtimes. Kubernetes supports multiple container runtimes compliant with CRI, such as CRI-O, Docker Engine, and containerd.
 
 The kubelet agent interacts with the container runtime using CRI APIs to manage the lifecycle of a container and provides all the container information to the control plane.
+
+## Addon Components
+
+To guarantee the complete functionality of your Kubernetes cluster, it is essential to incorporate supplementary add-on components along with the primary components. The selection of add-on components largely depends on your project requirements and use cases.
+
+Some popular addon components you might need on a cluster include CNI Plugin for networking, CoreDNS for the DNS server, Metrics Server for resource metrics, and Web UI for managing objects via web UI.
+
+By enabling these add-ons, you can greatly improve your Kubernetes cluster’s performance and functionality.
+
+### CNI Plugin
+
+Container Networking Interface (CNI) is a way to create network connections for containers, and it works with many different orchestration tools, not just Kubernetes. Organizations have varying needs regarding container networking, like security and isolation.
+
+Many different companies have created solutions for these needs using CNI. These solutions are called CNI Plugins, and you can choose one based on your needs.
+
+![Container Networking Interface](./docs/images/cni.png)
+
+This is how things operate when using CNI Plugins with Kubernetes: Each pod (a container or group of containers) gets a unique IP address. Then, the CNI Plugin connects the pods together, no matter where they’re located. This means that pods can communicate with each other even if they’re on different nodes.
+
+Many different CNI Plugins exist, including popular ones like Calico, Flannel, and Weave Net. It’s essential to choose the right one for your specific needs. Container networking is a huge responsibility, but CNI Plugins make managing it easier.
