@@ -1,3 +1,0 @@
-# Constraints
-
-See shared documentation
