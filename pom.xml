@@ -15,7 +15,7 @@
 
     <build>
         <plugins>
-            <!--plugin>
+            <plugin>
                 <groupId>de.microtema</groupId>
                 <artifactId>readmemd-maven-plugin</artifactId>
                 <version>2.0.0</version>
@@ -32,8 +32,8 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin-->
-            <plugin>
+            </plugin>
+            <!--plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-antrun-plugin</artifactId>
                 <version>1.8</version>
@@ -46,9 +46,9 @@
                         </goals>
                         <configuration>
                             <tasks>
-                                <!--exec executable="/bin/bash">
+                                <exec executable="/bin/bash">
                                     <arg value="./bpmn2png/export.sh" />
-                                </exec-->
+                                </exec>
                                 <exec executable="/bin/bash">
                                     <arg value="./resources/export.sh" />
                                     <arg value="./resources/enterprise-architecture.drawio" />
@@ -57,7 +57,7 @@
                         </configuration>
                     </execution>
                 </executions>
-            </plugin>
+            </plugin-->
         </plugins>
     </build>
 </project>
