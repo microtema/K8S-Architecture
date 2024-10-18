@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>de.microtema</groupId>
-    <artifactId>k8s</artifactId>
+    <artifactId>k8s-architecture</artifactId>
     <version>2.0.0</version>
     <packaging>maven-plugin</packaging>
 
@@ -20,7 +20,8 @@
                 <artifactId>readmemd-maven-plugin</artifactId>
                 <version>2.0.0</version>
                 <configuration>
-                    <docDir>./docs</docDir>
+                    <inputDocDir>.docs</inputDocDir>
+                    <outputDocDir>docs</outputDocDir>
                     <outputFile>README.md</outputFile>
                 </configuration>
                 <executions>

@@ -29,7 +29,7 @@ The Kubernetes control plane consists of several components, each responsible fo
 
 The kube-API server helps users and other components communicate with the cluster easily. Some monitoring systems and third-party services may also (very rarely) use it to interact with the cluster. When using a CLI like kubectl to manage the cluster, you use HTTP REST APIs to talk to the API server.
 
-![API Server](././docs/images/api_server.png)
+![API Server](./docs/images/api_server.png)
 
 > The internal cluster components (like the scheduler and controller), however, use gRPC for this communication.
 
@@ -41,7 +41,7 @@ The API server works only with etcd and includes a built-in bastion apiserver pr
 
 etcd is a useful tool for storing key-value data in a distributed approach. It’s designed for storing data about Kubernetes clusters, such as information about pods, their state, and namespaces. etcd is only accessible from the API server to maintain security.
 
-![ETCD](././docs/images/etcd.png)
+![ETCD](./docs/images/etcd.png)
 
 Kubernetes uses etcd to manage its key-value API through gRPC. All objects are stored under the /registry directory key in key-value format.
 
